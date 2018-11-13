@@ -1,0 +1,48 @@
+<!-- 박스의 보더(border) , 경계선에서 안쪽이 padding, 바깥쪽이 margin -->
+
+<!-- padding : 1값( 상,하를 의미 ) 2값( 좌,우를 의미 ) : 2개
+     padding : 상, 우, 하, 좌 : 4개 
+     padding : x 값 ( 상하좌우 모든 곳에 적용 됨 ) : 1개  
+    
+     margin 도 동일한 원리로 적용 된다.
+    -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box Model</title>
+  <style>
+    body,html{
+      padding: 0;
+      margin: 0;
+      background-color: green;
+      height: 100%;
+    }
+    .box{
+      background-color: yellow;
+      width: 50%;
+      height:50%;
+      padding:30px; /* all sides */
+      padding:30px 20px; /* top bottom | left right */
+      padding:20px 10px 5px 2px; /* top | bottom | left | right */
+      margin:30px; /* all sides */
+      margin:30px 20px; /* top bottom | left right */
+      margin:20px 10px 5px 2px; /* top | bottom | left | right */
+    }
+    .inside-box{
+      background-color: blue;
+      width:50%;
+      height: 50%;
+      border:5px dashed red; /* border-width | border-style ex) solid, dashed| border-color */
+    }
+  </style>
+</head>
+<body>
+    <div class="box">
+      <div class="inside-box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* css 는 selector 와 property 2개를 기억할 것  */
+/* selector 는 html tag 에 연결 & property 는 말그대로 속성 */
+
+/* h1 {} 이 부분이 selector */
+/* 1. 아이디의 경우 # 을 붙여서 #name
+   2. class 의 경우 . 을 붙여서 .name  
+   3. 섞는 것도 가능 ex) h1 .name ( 태그 + 클래스 )
+   */
+
+   
+/* 
+
+예제 1
+
+h1 {
+
+property-name : value;
+
+} 
+
+*/
+
+/* 
+예제 2
+
+selector (id,class,tag name){
+
+    property-name : value;
+
+} */
+
+h1 {
+    color: green;
+    font-size: 10;
+}
