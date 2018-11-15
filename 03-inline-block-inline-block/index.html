@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inline Example</title>
+  <style>
+  .box{
+    background-color: red;
+    width:200px;
+    height:200px;
+    border:2px solid black;
+    display: inline-block; /* block or inline or inline-block */
+  }
+  </style>
+</head>
+<body>
+  <span class="box">1</span>
+  <span class="box">1</span>
+  <span class="box">1</span>
+</body>
+</html>
+
+<!-- 
+
+    *** style 의 display 설정 ***
+
+1. block 이란 ?
+
+(1) element 가 크기와 상관없이 그 옆에 다른 element가 위치하는 것을 허용하지 않는 것 
+
+(2) 즉, 블록은 그 옆에 어떤 다른게 올 수 없음. 다른 element는 block의 위/아래에만 올 수 있음. 
+
+    ( 밑에 붙는다고 생각하면 됨. )
+
+(3) style 에 따로 설정하지 않는다면, block 이 default 임 
+
+
+
+2. inline-block 이란 ?
+
+(1) 서로서로 좌,우로 붙어 있는 것 
+
+(2) block 과 상반되는 개념 ( block 은 그 옆에 아무것도 없는 것임 )
+
+
+
+
+3. inline 이란 ?
+
+(1) 블록이 아님 : 따라서 모든 property 들을 무시함 ( 배경색, 높이, 넓이 기타...등등 )
+
+(2) 텍스트 처럼 적용이 된다. 따라서, 높이와 넓이 없음. 단지, 컨텐츠의 길이만 존재한다.
+
+(3) 텍스트가 없는 상태에서 설정하면, 모든게 사라짐.
+
+(4) 서로서로 좌,우로 붙어 있는 것 
+
+
+ -->
+
+ <!-- 
+
+ box 는 inline block 또는 block 둘 중 하나가 되어야 함.
+
+  -->
