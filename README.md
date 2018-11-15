@@ -1,3 +1,3 @@
-# kakao-clone
+# HtmlCssStudy
 
-Kakao Desktop App Clone
+HTML5 & CSS3 study
