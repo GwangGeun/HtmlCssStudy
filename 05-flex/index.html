@@ -1,0 +1,131 @@
+<!-- 
+
+ (1) 정의
+
+ flex 를 사용할 때는 chidren (자식) box 에 적용하지 않음.
+
+ 오직 부모 클래스에만 적용 하면 됨.
+
+
+ (2) 속성
+
+ 부모가 display: flex; 의 속성을 갖게 되면, block 이 아니라 inline-block 으로 설정이 된다.
+
+ 만약, display : block 을 설정한 것과 같은 효과 즉, 세로(수직)로 block 이 쌓이기를 원하면
+
+ flex-direction : column; 으로 지정 하면 된다. 
+
+
+ (3) 기타
+
+   1) flex-direction : 아이템이 쌓이는 방향  ex) column 은 display:block 처럼 세로(수직)로 box 가 쌓임,
+                                               
+                                               ex) 1
+                                                   2
+                                                   3
+
+                                               column-revser 는 세로(수직)로 box가 쌓이지만, 반대 순서로 쌓임
+
+                                               ex) 3
+                                                   2
+                                                   1
+
+                                               row 는 가로로 box 가 쌓임 ( default 값 )
+                                               
+                                               ex) 1, 2, 3, 4 ,5           (빈공간 )
+                                               
+                                               row-reverse 는 가로로 box 가 쌓이지만, 반대 순서로 쌓임
+                                               
+                                               ex)  (빈공간)                5, 4, 3, 2, 1
+
+
+   **** flex-direction 이 row 일 경우 ****
+                                                
+   2) justify-content: 아이템의 가로 위치 (수평) ex) center : 가운데 , space-between : 같은 간격으로 조정된다
+                                                   space-around : 그 주변도 같은 간격으로 조정이 된다.
+                                                   flex-start,flex-end 속성도 있음    
+
+   3) align-items : 아이템의 세로 위치 (수직) ex) center : 가운데, flex-start : 상단, flex-end 하단
+                                                baseline,stretch 속성도 있음 
+
+   **** flex-direction 이 column 일 경우 : 위와 반대임 ****
+   
+   2) justify-content: 아이템의 세로 위치 (수직) ex) center : 가운데 , space-between : 같은 간격으으로 조정된다
+                                                   space-around : 그 주변도 같은 간격으로 조정이 된다. 
+                                                   flex-start,flex-end 속성도 있음    
+                             
+
+   3) align-items : 아이템의 가로 위치 (수평) ex) center : 가운데, flex-start : 상단, flex-end 하단
+                                                baseline,stretch 속성도 있음 
+
+                                                
+   4) flex-wrap : no-wrap (default 설정임) 폭을 유지 하지 않음 
+
+                  ex) 1,2,3,4,5,6,7,8,9 (각 숫자의 width가 100 이더라도 숫자가 증가할 수록 width 가 상대적으로 10이 될 수 있음.)
+   
+                  no-wrap-reverse 도 있음. 아래의 설명들 보고 어떤 원리인지 이해하면 될 듯.
+
+                  wrap 폭을 유지하고 밑으로 box를 떨어트림 ( 화면이 줄어도 폭(width)는 그대로 유지해 준다. )
+
+                  ex) 1,2,3,4,5  ( 각 숫자의 width 를 유지하기 위해 공간이 부족할 경우, 나머지 숫자를 아래로 떨어트림 )
+                      6,7,8
+
+                  wrap-reverse 은 wrap 과 같지만 반대 방향으로 쌓임
+
+                  ex) 6,7,8
+                      1,2,3,5,6
+
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex</title>
+  <style>
+  html,body{
+    height: 100%;
+  }
+  .father{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap:wrap;
+  }
+  .box{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border:1px solid black;
+    display: flex; 
+    /* 
+       children 인 box 에 display :flex 를 설정한 이유 ?
+       box 내부에 있는 숫자를 움직이기 위한 목적이다.
+       숫자들은 box의 children 이니까!!
+     */
+    justify-content: center;
+    align-items: center;
+    color:white;
+  }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div>
+</body>
+</html>

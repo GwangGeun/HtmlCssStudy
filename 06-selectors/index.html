@@ -1,0 +1,108 @@
+<!-- 
+
+***  Pseudo-Selector (가상 셀렉터) 란 ? ***
+
+   : 셀렉터인데 element 가 아닌 것을 말함.
+
+   : 태그 이름이나, class, id를 쓰지 않고 선택하는 방법이 있다는 것을 아는 것이 중요 !  
+   
+   < ex >
+    
+    (1) input[type="submit"]{
+        background-color: red;
+        }
+
+        : input 타입이 submit 인 경우의 배경색만 red로 바꿈.
+
+
+        
+    (2) input{
+        border : 1px solid yellow;
+        }
+
+        : input 타입에 해당되는 모든 요소에 적용
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Selectors and Pseudo Selectors</title>
+  <style>
+  input[required="required"]{
+    background-color: red;
+  }
+  /* 하단의 속성 중 required="required" 의 속성이 지정되어 있는 부분들만 적용  */
+  .box:nth-child(3n+2){
+    background-color: pink;
+  }
+  /* 
+  
+     .box:first-child 제일 첫 box 만 !!
+     .box:last-child 제일 마지막 box 만 !!
+     .box:nth-child(숫자) 해당 숫자에 해당하는 box 만 !!
+     
+      만약 숫자가 2n 인 경우, 짝수에 해당하는 모든 box 들에 해당 속성을 지정함. 
+      
+  */
+  .container > .box{
+    background-color: yellow;
+  }
+
+  /*
+  
+  (1) container 의 하위 (자식에 해당되는) 에 있는 box 들의 배경색 color 를 "yellow" 로 지정해라 !! 라는 의미.
+  
+  (2) 이 부분을 지정하면 하단의 .box 에서 지정한 background-color :green 은 container의 하위의 (자식에 해당되는)
+
+      box 들에 대해서는 지정되지 않음.
+
+  */
+
+  .box{
+    background-color: green;
+    display: block;
+    height: 100px;
+    border:1px solid black;
+  }
+
+  .child{
+    width: 40px;
+  }
+
+  </style>
+
+</head>
+<body>
+<div class="container">
+  <div class="box">
+    <div class="box child"></div>
+    <!-- 
+        
+        class="box child" 인 이 부분은 box의 하위(자식)이지 container의 자식이 아니라고 봄.
+    
+        때문에, 상위 속성이 container 가 아닌 box 임.
+
+    -->
+  </div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box">
+    <input type="password" required="required" />
+    <input type="submit" required="required" />
+  </div>
+</div>
+</body>
+</html>
+

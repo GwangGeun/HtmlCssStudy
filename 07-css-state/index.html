@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS States</title>
+  <style>
+  
+  .box{
+    background-color: red;
+    font-size: 40px;
+  }
+
+  .box:hover{
+    background-color: pink;
+  }
+  
+  /* 
+  
+  hover 는 box 위에 무엇인가 올라간다는 뜻
+
+  즉, 마우스 커서 같은게 해당 box 위에 올라가면 기존 배경색에서 pink 색으로 바뀜
+
+  */
+
+  .box:active{
+    background-color: green;
+  }
+
+  /* 
+  
+  active 는 마우스 클릭시에 변하게 되는 속성을 지정
+
+  즉, 마우스 클릭시 기존 배경색에서 green 으로 색이 바뀜
+
+  */
+
+ 
+  input:focus{
+    background-color:blue;
+  }
+
+ /* 
+ 
+  ***** 중요 *****
+
+  (1) 
+
+  만약)) .box:focus{ background-blue } 이고  .box:hover{ background-pink } 이면
+
+         .box:hover{ background-pink } 의 속성은 **무시**된다. 
+
+
+  (2) 무시된다 ??
+  
+   focus 를 받고 있는 동안 (마우스 커서가 올라가 있는 상태 )에는 hover , active 가 다 안먹히고 focus 의 속성만 먹힘.
+
+
+  (3)
+
+  단, span 에는 focus 가 먹히지 않고, hover 만 사용 가능 함. textarea, input 같은 경우에만 focus 가 먹힘
+
+  */
+
+  a:visited{
+    color: yellow;
+  }
+ 
+ /* 
+ 
+  해당 링크를 "Naver"를 눌러서 방문한 적이 있으면 "Naver" 라는 글자는 노란색으로 변함.
+
+ */
+
+  </style>
+</head>
+<body>
+  <input type="text">
+  <span class="box">lalalalalala</span>
+  <!-- <textarea class="box">lalalalalala</textarea> -->
+  <a href="http://kakao.com">Naver</a>
+</body>
+</html>
