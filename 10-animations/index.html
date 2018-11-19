@@ -1,0 +1,57 @@
+ <!-- 
+
+ 1. Keyframes 은 css로 하여금 내가 애니메이션을 생성했다고 알려주는 역할을 한다 
+
+
+ 2. Keyframes 을 적는 방식(규칙). 아래의 주석 부분 및 코드 확인.
+
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transformations</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background: red;
+      animation: 1.5s scaleAndRotateSquare infinite ease-in-out;
+    }
+    /*
+    
+    stage 가 2개만 있는 경우는 아래와 같이 쓰면 됨.
+
+    @keyframes scaleAndRotateSquare {
+      from{
+      }
+      to{
+      }
+    }
+    
+    */
+    @keyframes scaleAndRotateSquare {
+      0%{
+        transform:none;
+      }
+      50%{
+        transform: rotate(1turn) scale(.5, .5);
+        color:white;
+      }
+      100%{
+        transform: none;
+        color:blue;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="box">11</div>
+</body>
+</html>

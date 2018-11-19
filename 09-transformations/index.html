@@ -1,0 +1,44 @@
+
+<!-- 
+
+ 1. 정의
+
+: transform 은 말 그대로 변형 시키는 것 (element의 모양새를 바꾸는 것). 아래 참고 주소들 보면 금방 이해 됨.
+필요에 따라 찾아서 쓰면 될 듯.
+
+ 2. 참고 주소
+
+ https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transformations</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background: red;
+      transition: transform .5s ease-in-out;
+    }
+    .box:hover{
+      transform: rotate(1turn) scale(.5, .5);
+    }
+    /* 
+    
+    위의 코드는 transition 과 transform 을 동시에 일어나도록 섞어 쓴 거임.
+
+    즉, transition 순간에 모양새가 transform (변함)
+    
+     */
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

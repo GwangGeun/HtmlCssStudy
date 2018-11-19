@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transitions</title>
+  <style>
+  .box{
+    background-color: green;
+    color:white;
+    transition:all .5s ease-in-out;
+  }
+
+  /* 
+  
+   < transition 은 애니메이션 효과 같은 거임. >
+
+   1. 정의
+
+   : 어떤 state 가 바뀔 때 적용이 되는 것임. ( 작성한 property or all (전체를) 변경 효과를 주는 것 )
+
+    state의 종류로는 hover, active, focus, visited 가 있음.
+
+    if) state 가 바뀔 때가 아닌 항상 animation 을 적용하려면 animation 을 만들어서 적용시키면 됨.
+    
+    10-animations 를 참고.
+
+
+
+   2. 속성
+   
+   (1) all 은 모든 속성에 대해 적용하라는 의미. 
+   
+   : all 대신 background-color 를 설정할 경우, background-color 에 대해서만 해당 애니메이션이 적용 됨.
+
+   (2) ".5s" 는 0.5 초를 의미. 5초를 지정하고 싶으면 "5s" 
+   
+   (3) ease-in-out 은 깜박 출현했다가 사라지라는 의미  
+   
+
+
+   3. 참고 주소
+
+   https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+
+
+   */
+  
+  .box:hover{
+    background-color: red;
+    color:blue;
+  }
+  </style>
+</head>
+<body>
+  <span class="box">
+    Text
+  </span>
+</body>
+</html>
