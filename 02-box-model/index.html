@@ -1,11 +1,13 @@
 <!-- 박스의 보더(border) , 경계선에서 안쪽이 padding, 바깥쪽이 margin -->
 
-<!-- padding : 1값( 상,하를 의미 ) 2값( 좌,우를 의미 ) : 2개
-     padding : 상, 하, 좌, 우 : 4개 
+<!-- 
+     
+     padding : 1값( 상,하를 의미 ) 2값( 좌,우를 의미 ) : 2개
+     padding : 상, 우, 하, 좌 : 4개 ( 시계방향 )
      padding : x 값 ( 상하좌우 모든 곳에 적용 됨 ) : 1개  
-    
+
      margin 도 동일한 원리로 적용 된다.
-    -->
+-->
 
     <!DOCTYPE html>
 <html lang="en">
@@ -25,12 +27,12 @@
       background-color: yellow;
       width: 50%;
       height:50%;
-      padding:30px; /* all sides */
-      padding:30px 20px; /* top bottom | left right */
-      padding:20px 10px 5px 2px; /* top | bottom | left | right */
-      margin:30px; /* all sides */
-      margin:30px 20px; /* top bottom | left right */
-      margin:20px 10px 5px 2px; /* top | bottom | left | right */
+      padding:30px; 
+      padding:30px 20px; 
+      padding:20px 10px 5px 2px; 
+      margin:30px; 
+      margin:30px 20px; 
+      margin:20px 10px 5px 2px; 
     }
     .inside-box{
       background-color: blue;
